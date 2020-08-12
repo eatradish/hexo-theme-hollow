@@ -2,29 +2,12 @@
 
 一款极致简洁的博客主题 😉 可访问[我的博客](http://www.chen9.info/fragment/)查看实际效果
 
-
-## 界面
-
-- 主页
-
-![](http://7xic0o.com1.z0.glb.clouddn.com/hexo-theme-hollow-01.png)
-
-- 文章
-
-![](http://7xic0o.com1.z0.glb.clouddn.com/hexo-theme-hollow-02.png)
-
-- 分类
-
-![](http://7xic0o.com1.z0.glb.clouddn.com/hexo-theme-hollow-03.png)
-
-
-
 ## 安装
 
 在你的 Hexo 博客仓库下 clone 主题
 
 	git clone https://github.com/zchen9/hexo-theme-hollow.git themes/hollow
-	
+
 在博客下的 _config.yml 文件修改主题为 hollow
 	
 	theme: hollow
@@ -39,7 +22,6 @@
 
 	hexo deploy
 	
-	
 ## 配置
 
 主题下的 _config.yml 文件
@@ -50,8 +32,9 @@
 	
 	# Date Format
 	# 文章时间戳格式
+	# 也可以在博客主体的 _config.yml 配置，优先取博客主体的时间配置
 	date_format: YYYY 年 MM 月 DD 日
-	
+
 	# Comment 
 	# 填写 disqus_shortname 即可使用 disqus
 	comments:
@@ -60,11 +43,42 @@
 	# Google Analytics Tracking ID
 	google_analytics: 
 	 
-	
-## 问题
+## 文章格式
 
-有什么好的建议或者发现BUG 欢迎提 [issue](https://github.com/zchen9/hexo-theme-hollow/issues) 和我讨论 🙋🏻
+以下为 markdown 格式：
 
+```
+title: <文章标题>
+category: <文章分类>
+date: <文章日期> [YYYY-MM-DD]
+
+---
+
+文章预览内容
+
+<!--more-->
+
+文章正文在此
+
+```
+
+## CHANGELOG
+
+20190526 @zchen9
+- 主页开放小相机
+- 微调阅读样式
+- 优化搜索功能
+
+20190519 @fakeYanss [pull/36](https://github.com/zchen9/hexo-theme-hollow/pull/36)
+- 增加service worker
+- 本地搜索
+- 文章图片放大查看
+
+## 其他
+
+- 此主题不适用写技术博客贴代码
+- 作者很懒，更新频率看心情 ╮(╯_╰)╭
+- 欢迎贡献你的代码 🙋 [issue](https://github.com/zchen9/hexo-theme-hollow/issues)
 
 ## LICENSE
 
