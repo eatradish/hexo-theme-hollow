@@ -25,26 +25,7 @@
                     <div class="post-content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <%- item.content %>
 
-<<<<<<< HEAD
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Main Content -->
-            <div class="post-content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <%- item.content %>
 
-                <!-- Meta -->
-                <div class="post-meta">
-                    <hr>
-                    <br>
-                    <div class="post-tags">
-                        <% if (item.tags && item.tags.length){ %>
-                            <%- partial('article-tags', {item: item}) %>
-                        <% } else if (item.categories && item.categories.length) { %>
-                            <%- partial('article-categories', {item: item}) %>
-                        <% } %>
-=======
                             <!-- Meta -->
                             <div class="post-meta">
                                 <hr>
@@ -60,7 +41,6 @@
                                     <%- item.date.format(config.date_format || theme.date_format) %>
                                 </div>
                             </div>
->>>>>>> upstream/master
                     </div>
 
                     <!-- Comments -->
@@ -72,16 +52,8 @@
         </article>
 </section>
 
-<<<<<<< HEAD
-            <!-- Comments -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <%- partial("_partial/comment.ejs") %>
-            </div>
-        </div>
-    </div>
-</article>
-</section>
-=======
+
+
 <!-- Image viewer-->
 <%- partial('_partial/img-viewer') %>
->>>>>>> upstream/master
+

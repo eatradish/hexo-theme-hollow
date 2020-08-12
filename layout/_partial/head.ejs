@@ -6,14 +6,14 @@
         const cn_font_family = "'Source Serif Pro', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Noto Serif SC', serif;";
         const other_font_family = "'Source Serif Pro', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Noto Serif SC', serif;";
         let font_family = '';
-        if (config.language === 'zh-cn' && !theme.vertical) {
+        if (config.language === 'zh-CN') {
             font_family = theme.custom_fonts  ? theme.custom_fonts + ', ' + cn_font_family : cn_font_family;
         } else {
             font_family = theme.custom_fonts ? theme.custom_fonts + ', ' + other_font_family : other_font_family;
         }
     %>
     <link href="https://<%= theme.font_mirror %>/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <%  if (config.language === 'zh-cn' && !theme.vertical) { %>
+    <% if (config.language === 'zh-CN' ) { %>
     <link href="https://<%= theme.font_mirror %>/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -27,6 +27,7 @@
             font-family: <%- font_family %>
         }
     </style>
+    <% } %>
     <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
     <!--Description-->
     <% if (page.description){ %>

@@ -24,3 +24,5 @@ image_viewer: true
 
 # fonts mirror
 font_mirror: fonts.googleapis.com
+
+custom_font:
