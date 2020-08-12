@@ -21,3 +21,6 @@ local_search: true
 # using viewer.js to view image
 # https://fengyuanchen.github.io/viewerjs/
 image_viewer: true
+
+# fonts mirror
+font_mirror: fonts.googleapis.com

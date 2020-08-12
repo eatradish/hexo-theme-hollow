@@ -2,8 +2,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://use.typekit.net/xsa4edz.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <%
+        const cn_font_family = "'Source Serif Pro', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Noto Serif SC', serif;";
+        const other_font_family = "'Source Serif Pro', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Noto Serif SC', serif;";
+        let font_family = '';
+        if (config.language === 'zh-cn' && !theme.vertical) {
+            font_family = theme.custom_fonts  ? theme.custom_fonts + ', ' + cn_font_family : cn_font_family;
+        } else {
+            font_family = theme.custom_fonts ? theme.custom_fonts + ', ' + other_font_family : other_font_family;
+        }
+    %>
+    <link href="https://<%= theme.font_mirror %>/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <%  if (config.language === 'zh-cn' && !theme.vertical) { %>
+    <link href="https://<%= theme.font_mirror %>/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: <%- font_family %>
+        }
+    </style>
+    <% } else { %>
+    <link href="https://<%= theme.font_mirror %>/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: <%- font_family %>
+        }
+    </style>
     <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
     <!--Description-->
     <% if (page.description){ %>
