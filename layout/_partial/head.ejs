@@ -2,32 +2,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%
-        const cn_font_family = "'Source Serif Pro', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Noto Serif SC', serif;";
-        const other_font_family = "'Source Serif Pro', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Noto Serif SC', serif;";
-        let font_family = '';
-        if (config.language === 'zh-CN') {
-            font_family = theme.custom_fonts  ? theme.custom_fonts + ', ' + cn_font_family : cn_font_family;
-        } else {
-            font_family = theme.custom_fonts ? theme.custom_fonts + ', ' + other_font_family : other_font_family;
-        }
-    %>
-    <link href="https://<%= theme.font_mirror %>/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <% if (config.language === 'zh-CN' ) { %>
-    <link href="https://<%= theme.font_mirror %>/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: <%- font_family %>
-        }
-    </style>
-    <% } else { %>
-    <link href="https://<%= theme.font_mirror %>/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: <%- font_family %>
-        }
-    </style>
-    <% } %>
     <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
     <!--Description-->
     <% if (page.description){ %>
@@ -66,10 +40,6 @@
     <!-- Custom CSS -->
     <%- css('css/style.css') %>
 
-    <!-- Custom Fonts -->
-    <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='//fonts.googleapis.com/css?family=Noto+Serif:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
     <!-- jQuery -->
     <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -81,4 +51,30 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <%
+        const cn_font_family = "'Source Serif Pro', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Noto Serif SC', serif;";
+        const other_font_family = "'Source Serif Pro', 'Source Han Serif TC', 'Noto Serif CJK TC', 'Noto Serif TC', serif;";
+        let font_family = '';
+        if (config.language === 'zh-CN') {
+            font_family = theme.custom_fonts  ? theme.custom_fonts + ', ' + cn_font_family : cn_font_family;
+        } else {
+            font_family = theme.custom_fonts ? theme.custom_fonts + ', ' + other_font_family : other_font_family;
+        }
+    %>
+    <link href="https://<%= theme.font_mirror %>/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <% if (config.language === 'zh-CN' ) { %>
+    <link href="https://<%= theme.font_mirror %>/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: <%- font_family %>
+        }
+    </style>
+    <% } else { %>
+    <link href="https://<%= theme.font_mirror %>/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: <%- font_family %>
+        }
+    </style>
+    <% } %>
 </head>
